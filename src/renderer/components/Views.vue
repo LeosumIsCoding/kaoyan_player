@@ -2,7 +2,7 @@
     <div id="views">
         <div ref="entrys" class="entrys">
             <div class="entry">
-123123
+                123123
             </div>
             <div ref="dragline" id="dragline">
 
@@ -33,7 +33,7 @@
             })
             document.addEventListener("mouseup", function(){
                     document.removeEventListener("mousemove", move)
-                })
+            })
         }   
     }
 </script>

@@ -24,7 +24,7 @@
     </div>
 
     <div class="controls">
-      3 123123
+      <Controls/>
     </div>
     
   </div>
@@ -34,9 +34,10 @@
 const ipcRenderer = require("electron").ipcRenderer
 
 import Views from "./components/Views.vue"
+import Controls from "./components/Controls.vue"
   export default {
     name: 'mp4linux',
-    components:{Views},
+    components:{Views, Controls},
     data() {
       return {
         isMax:false
@@ -59,6 +60,7 @@ import Views from "./components/Views.vue"
       // ipcRenderer.on("heihei",(value)=>{
       //   console.log(value)
       // })
+      console.log(this,"12312321312321");
     }
   }
 </script>
@@ -80,7 +82,6 @@ import Views from "./components/Views.vue"
     /* display: flex;
     flex-direction: column; */
     overflow: hidden;
-    background-color: antiquewhite;
   }
   .nodrag{
     position: absolute;
@@ -119,12 +120,11 @@ import Views from "./components/Views.vue"
       width: 100%;
       height: 100%;
       /* background-color: aquamarine; */
-      padding-bottom: 120px;
+      padding-bottom: 100px;
   }
   .controls{
-    height: 120px;
+    height: 100px;
     width: 100%;
-    background-color: rgba(5, 112, 67, 0.434);
     position:fixed;
     bottom: 0;
   }

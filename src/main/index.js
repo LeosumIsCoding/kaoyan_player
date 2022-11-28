@@ -21,14 +21,15 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
+    minWidth:800,
     height: 563,
     useContentSize: true,
-    width: 1000,
     frame:false,
     transparent:true
   })
 
   mainWindow.loadURL(winURL)
+  mainWindow.setMinimumSize(800, 560)
 
   mainWindow.on('closed', () => {
     mainWindow = null
