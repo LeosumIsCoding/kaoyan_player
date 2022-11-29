@@ -4,6 +4,12 @@
     <div class="title">
       <div class="title__left"></div>
       <div class="title__right">
+        <div  @click="turnDark" class="option img-border">
+          Dark
+        </div>
+        <div  @click="turnLight" class="option img-border">
+          Light
+        </div>
         <div  @click="min" class="option img-border">
           min
         </div>
@@ -23,7 +29,7 @@
       <Views/>
     </div>
 
-    <div class="controls">
+    <div id="controls" class="controls">
       <Controls/>
     </div>
     
@@ -32,7 +38,7 @@
 
 <script>
 const ipcRenderer = require("electron").ipcRenderer
-
+// import img from "./assets/globalDark.css"
 import Views from "./components/Views.vue"
 import Controls from "./components/Controls.vue"
   export default {
@@ -47,30 +53,43 @@ import Controls from "./components/Controls.vue"
     methods:{
       min(){
         ipcRenderer.send("minimizeMainWindow")
+        
       },
       max(){
         ipcRenderer.send("maximizeMainWindow")
         this.isMax = !this.isMax
+        
       },
       close(){
         ipcRenderer.send("closeMainWindow")
+      },
+      turnDark(){
+        document.getElementById("theme").href = "./src/renderer/assets/globalDark.css"
+      },
+      turnLight(){
+        document.getElementById("theme").href = "./src/renderer/assets/globalLight.css"
       }
     },
     mounted(){
-      // ipcRenderer.on("heihei",(value)=>{
-      //   console.log(value)
-      // })
-      console.log(this,"12312321312321");
+      if(!document.getElementById("theme")){
+        let link = document.createElement("link")
+        link.type = 'text/css'
+        link.id = 'theme'
+        link.rel = 'stylesheet'
+        link.href = "./src/renderer/assets/globalDark.css"
+        document.getElementsByTagName("head")[0].appendChild(link)
+      }
+
     }
   }
 </script>
 
 <style>
   /* CSS */
-  body,html{
+*{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
 
   #app{
@@ -127,5 +146,6 @@ import Controls from "./components/Controls.vue"
     width: 100%;
     position:fixed;
     bottom: 0;
+    /* opacity: 0.3; */
   }
 </style>

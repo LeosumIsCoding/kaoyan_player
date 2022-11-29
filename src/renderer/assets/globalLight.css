@@ -1,0 +1,116 @@
+#app{
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 2s;
+}
+/* entrys*/
+.entrys{
+    background-color: white;
+}
+#logo{
+    background-color: rgb(23, 167, 224);
+    transition: all 2s;
+}
+#home{
+    background-image: url("./views/首页.png");
+    background-position: top;
+    background-size: cover;
+    cursor: pointer;
+}
+.entry-option:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+#import{
+    background-image: url("./views/导入.png");
+    background-position: top;
+    background-size: cover;
+    cursor: pointer;
+}
+#sys-setting{
+    background-image: url("./views/设置.png");
+    background-position: top;
+    background-size: cover;
+    cursor: pointer;
+}
+/* entrys*/
+
+
+/* controls */
+.controls{
+    background-color: rgb(255, 255, 255);
+}
+.controls  .mid{
+    background-color: white;
+}
+
+#last-music{
+    background-image: url("./controls/上一首.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#last-music:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+
+#play-music{
+    background-image: url("./controls/播放.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#play-music:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+
+#next-music{
+    background-image: url("./controls/下一首.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#next-music:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+
+#music-volume{
+    background-image: url("./controls/音量.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#music-volume:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+#music-list{
+    background-image: url("./controls/单列列表.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#music-list:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+#setting{
+    background-image: url("./controls/设置.png");
+    background-position: top;
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#setting:hover{
+    filter: invert(70%) sepia(53%) saturate(1993%) hue-rotate(165deg) brightness(105%) contrast(103%);
+    transition: all 0.2s;
+}
+/* controls */
+
